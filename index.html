@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(90deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%));
+      display: grid;
+      grid-template-columns: 60% 40%;
+      height: 100vh;
+    }
+
+    footer {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      bottom: 2rem;
+      left: 0;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .header {
+      margin-top: 6rem;
+    }
+
+    .header__logo {
+      height: 3rem;
+    }
+
+    .main {
+      position: relative;
+      padding-left: 18rem;
+      padding-right: 33rem;
+      min-width: 40rem;
+      grid-column: 1/2;
+      background-image: url(./images/bg-pattern-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .hero {
+      grid-column: 2/3;
+      background-image: url(./images/hero-desktop.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .main__title {
+      margin-top: 13rem;
+      font-size: 7rem;
+      letter-spacing: 1.2rem;
+      color: hsl(0, 36%, 70%);
+      font-weight: 300;
+    }
+
+    .main__title--black {
+      font-weight: 600;
+      color: black;
+    }
+
+    .main__text {
+      min-width: 20rem;
+      margin-top: 2rem;
+      line-height: 3rem;
+      font-size: 1.6rem;
+      color: hsl(0, 36%, 70%);
+    }
+
+    .main__form {
+      display: flex;
+      justify-content: center;
+      margin-top: 4rem;
+      min-width: 28rem;
+    }
+
+    .main__error {
+      display: none;
+      color: hsl(0, 93%, 68%);
+      margin-top: 1rem;
+      margin-left: 3rem;
+      font-size: 1.2rem;
+      min-width: 17rem;
+    }
+
+    .form__input {
+      height: 6rem;
+      width: 100%;
+      border-radius: 3rem;
+      border: 1px hsl(0, 36%, 70%) solid;
+      padding-left: 3rem;
+      font-size: 1.5rem;
+    }
+
+    .form__input::placeholder {
+      color: hsl(0, 36%, 70%);
+    }
+
+    .form__input:focus {
+      outline: none;
+    }
+
+    .form__submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-left: -6rem;
+      height: 6rem;
+      width: 13rem;
+      border-radius: 3rem;
+      border: none;
+      box-shadow: 0px 20px 20px hsla(0, 36%, 70%, 0.3);
+      background: linear-gradient(90deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+    }
+
+    .form__submit:active {
+      background: hsl(0, 100%, 86%);
+    }
+
+    .form__submit--error::before {
+      content: "";
+      background-image: url(./images/icon-error.svg);
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      left: -4rem;
+    }
+
+    .submit__icon {
+      height: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        grid-template-columns: none;
+      }
+
+      .main {
+        padding: 2rem;
+        min-width: 0;
+        background-image: none;
+      }
+
+      .header {
+        margin: 0;
+      }
+
+      .header__logo {
+        height: 1.3rem;
+      }
+
+      .main__title {
+        margin-top: 21rem;
+        font-size: 2.5rem;
+        text-align: center;
+        letter-spacing: 0.8rem;
+      }
+
+      .main__text {
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        min-width: 0;
+      }
+
+      .main__form {
+        min-width: 0;
+        margin-top: 2rem;
+      }
+
+      .form__input {
+        height: 3rem;
+        border-radius: 1.5rem;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+      }
+
+      .form__submit {
+        height: 3rem;
+        margin-left: -3rem;
+        width: 4rem;
+        border-radius: 1.5rem;
+      }
+
+      .submit__icon {
+        height: auto;
+      }
+
+      .main__error {
+        min-width: 0;
+        font-size: 1rem;
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .form__submit::before {
+        background-size: 1.5rem 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        left: -2rem;
+      }
+
+      .hero {
+        grid-column: 1;
+        top: 5.3rem;
+        width: 100%;
+        position: absolute;
+        height: 15rem;
+      }
+
+      footer {
+        bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="Base Apparel logo">
+    </header>
+    <h1 class="main__title">
+      WE'RE</br>
+      <span class="main__title--black">
+        COMING</br>
+        SOON
+      </span>
+    </h1>
+
+    <p class="main__text">
+      Hello fellow shoppers! We're currently building our new fashion store.
+      Add your email below to stay up-to-date with announcements and our launch deals.
+    </p>
+
+    <form class="main__form" name="emailSubmit" action="#">
+      <input class="form__input" type="text" id="input" name="email" placeholder="Email Address">
+      <button class="form__submit" type="button" id="submit" onclick="ValidateEmail(document.emailSubmit.email)">
+        <img class="submit__icon" src="./images/icon-arrow.svg" alt="Arrow icon">
+      </button>
+    </form>
+    <p class="main__error" id="error">
+      Please provide a valid email
+    </p>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/Hoerrin">Patryk Dworakowski</a>.
+      </p>
+    </footer>
+  </main>
+  <aside class="hero">
+
+  </aside>
+
+  <script>
+    function ValidateEmail(mail) {
+      var button = document.getElementById("submit")
+      var error = document.getElementById("error")
+      var input = document.getElementById("input")
+      if (mail.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+        button.classList.remove('form__submit--error');
+        input.style.border = "none";
+        error.style.display = "none";
+        return (true)
+      } else {
+        button.classList.add('form__submit--error');
+        input.style.border = "1px solid hsl(0, 93%, 68%)";
+        error.style.display = "block";
+        return (false)
+      }
+    }
+  </script>
+</body>
+
+</html>
