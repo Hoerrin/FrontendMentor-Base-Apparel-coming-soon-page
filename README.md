@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [FrontEnd Mentor](*update*)
-- Live Site URL: [GitHub Pages](*update*)
+- Live Site URL: [GitHub Pages](https://hoerrin.github.io/FrontendMentor-base-apparel-coming-soon-page/)
 
 ## Author
 
