@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontEnd Mentor](*update*)
+- Solution URL: [FrontEnd Mentor](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-LjOnxsi50)
 - Live Site URL: [GitHub Pages](https://hoerrin.github.io/FrontendMentor-base-apparel-coming-soon-page/)
 
 ## Author
