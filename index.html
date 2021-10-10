@@ -51,16 +51,16 @@
     }
 
     .header {
-      margin-top: 6rem;
+      margin-top: 4rem;
     }
 
     .header__logo {
-      height: 3rem;
+      height: 2rem;
     }
 
     .main {
       position: relative;
-      padding-left: 18rem;
+      padding-left: 9rem;
       min-width: 60%;
       grid-column: 1/2;
       background-image: url(./images/bg-pattern-desktop.svg);
@@ -76,9 +76,10 @@
     }
 
     .main__title {
-      margin-top: 13rem;
-      font-size: 7rem;
+      margin-top: 8rem;
+      font-size: 4rem;
       letter-spacing: 1.2rem;
+      line-height: 1.1;
       color: hsl(0, 36%, 70%);
       font-weight: 300;
     }
@@ -90,37 +91,35 @@
 
     .main__text {
       min-width: 20rem;
-      max-width: 40rem;
-      margin-top: 2rem;
-      line-height: 3rem;
-      font-size: 1.6rem;
+      max-width: 27rem;
+      margin-top: 1rem;
+      line-height: 1.8;
       color: hsl(0, 36%, 70%);
     }
 
     .main__form {
       display: flex;
       justify-content: center;
-      margin-top: 4rem;
-      min-width: 28rem;
-      max-width: 40rem;
+      margin-top: 2.5rem;
+      min-width: 23rem;
+      max-width: 27rem;
     }
 
     .main__error {
       display: none;
       color: hsl(0, 93%, 68%);
       margin-top: 1rem;
-      margin-left: 3rem;
-      font-size: 1.2rem;
+      margin-left: 2rem;
       min-width: 17rem;
     }
 
     .form__input {
-      height: 6rem;
+      height: 3.5rem;
       width: 100%;
-      border-radius: 3rem;
+      border-radius: 2rem;
       border: 1px hsl(0, 36%, 70%) solid;
-      padding-left: 3rem;
-      font-size: 1.5rem;
+      padding-left: 2rem;
+      font-size: 1.1rem;
       background: none;
     }
 
@@ -137,27 +136,29 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      margin-left: -6rem;
-      height: 6rem;
-      width: 13rem;
+      margin-left: -3rem;
+      height: 3.5rem;
+      width: 7rem;
       border-radius: 3rem;
       border: none;
-      box-shadow: 0px 20px 20px hsla(0, 36%, 70%, 0.3);
+      box-shadow: 0px 10px 15px 5px hsl(0deg 36% 70% / 30%);
       background: linear-gradient(90deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+      transition: box-shadow 0.1s;
     }
 
-    .form__submit:active {
+    .form__submit:hover {
       background: hsl(0, 100%, 86%);
+      box-shadow: 0px 10px 15px 5px hsl(0deg 36% 70% / 60%);
     }
 
     .form__submit--error::before {
       content: "";
       background-image: url(./images/icon-error.svg);
-      background-size: 2rem 2rem;
-      width: 2rem;
-      height: 2rem;
+      background-size: 1.5rem 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
       position: absolute;
-      left: -4rem;
+      left: -2.5rem;
     }
 
     .submit__icon {
@@ -192,6 +193,7 @@
 
       .main__text {
         text-align: center;
+        margin: auto;
         font-size: 0.9rem;
         line-height: 1.3rem;
         min-width: 0;
@@ -199,7 +201,7 @@
 
       .main__form {
         min-width: 0;
-        margin-top: 2rem;
+        margin: 2rem auto;
       }
 
       .form__input {
